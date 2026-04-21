@@ -2,158 +2,196 @@
 
 int main(){
   // Área para definição das variáveis para armazenar as propriedades das cidades
-  char estado[50];
-  char codigo1[30], nome[30], codigo2[30];
-  int numero;
+  char estado1[50], estado2[50];
+  char codigo1[30], codigo2[30], nome1[30], nome2[30];
+  int numero1, numero2, opçao;
   int pontos1, pontos2;
-  float area, densidade, super;
-  double pib, pibp, populaçao;
+  float area1, area2, densidade1, densidade2, super1, super2;
+  double pib1, pib2, pibp1, pibp2, populaçao1, populaçao2;
 
   // Área para entrada de dados
+
+  
   printf("Estado:\n");
-  scanf("%s", estado);
-  getchar(); // limpar o enter que ficou no buffer
+  fgets(estado1, 50, stdin);
 
   printf("Código da carta:\n");
   scanf("%s", codigo1);
   getchar(); // limpar o enter que ficou no buffer
 
   printf("Nome da Cidade:\n");
-  scanf("%s", nome);
-  getchar(); // limpar o enter que ficou no buffer
-
+  fgets(nome1, 30, stdin);
+  
   printf("População:\n");
-  scanf("%lf", &populaçao);
+  scanf("%lf", &populaçao1);
   getchar(); // limpar o enter que ficou no buffer 
 
   printf("Área em km²:\n");
-  scanf("%f", &area);
+  scanf("%f", &area1);
   getchar(); // limpar o enter que ficou no buffer
 
   printf("Pib:\n");
-  scanf("%lf", &pib);
+  scanf("%lf", &pib1);
   getchar(); // limpar o enter que ficou no biffer
 
   printf("Números de pontos turístios:\n");
-  scanf("%d", &numero);
+  scanf("%d", &numero1);
   getchar(); // limpar o enter que ficou no buffer
  
   // Não sei o que colocar ;-;
-  densidade = populaçao / area;
+  densidade1 = populaçao1 / area1;
 
-  pibp = pib / populaçao;
+  pibp1 = pib1 / populaçao1;
 
-  super = populaçao + area + pib + pibp + numero + (1.0 / densidade);
+  super1 = populaçao1 + area1 + pib1 + pibp1 + numero1 + (1.0 / densidade1);
 
   printf("\n\n"); // pula duas linhas
   
   // Área para exibição dos dados da cidade
-  printf("Estado: %s\n", estado);
+  printf("Estado: %s\n", estado1);
   printf("Codigo da carta: %s\n", codigo1);
-  printf("Nome da cidade: %s\n", nome);
-  printf("População %.0lf\n", populaçao);
-  printf("Área em km²: %.0f\n", area);
-  printf("Pib: %.0lf\n", pib);
-  printf("Número de pontos turísticos: %d\n", numero);
-  printf("Densidade Populacional: %.3f\n", densidade);
-  printf("Pib Per Capita: %.0lf\n", pibp);
-  printf("Super poder: %.0f\n\n\n", super);
+  printf("Nome da cidade: %s\n", nome1);
+  printf("População %.0lf\n", populaçao1);
+  printf("Área em km²: %.0f\n", area1);
+  printf("Pib: %.0lf\n", pib1);
+  printf("Número de pontos turísticos: %d\n", numero1);
+  printf("Densidade Populacional: %.3f\n", densidade1);
+  printf("Pib Per Capita: %.lf\n", pibp1);
+  printf("Super poder: %.0f\n\n\n", super1);
 
   printf("Estado:\n");
-  scanf("%s", estado);
-  getchar(); // limpar o enter que ficou no buffer
-
+  fgets(estado2, 50, stdin);
+  
   printf("Código da carta:\n");
   scanf("%s", codigo2);
   getchar(); // limpar o enter que ficou no buffer
 
   printf("Nome da cidade:\n");
-  scanf("%s", nome);
-  getchar(); // limpar o enter que ficou no buffer
+  fgets(nome2, 30, stdin);
 
   printf("População:\n");
-  scanf("%lf", &populaçao);
+  scanf("%lf", &populaçao2);
   getchar(); // limpar o enter que ficou no buffer
 
   printf("Área em km²\n");
-  scanf("%f", &area);
+  scanf("%f", &area2);
   getchar(); // limpar o enter que ficou no buffer
 
   printf("Pib:\n");
-  scanf("%lf", &pib);
+  scanf("%lf", &pib2);
   getchar(); // limpar o enter que ficou no buffer
 
   printf("Números de pontos turísticos:\n");
-  scanf("%d", &numero);
+  scanf("%d", &numero2);
   getchar(); // limpar o enter que ficou no buffer
   
   // Não sei o que colocar ;-;
-  densidade = populaçao / area;
+  densidade2 = populaçao2 / area2;
 
-  pibp = pib / populaçao;
-  
-  super = (populaçao + area + pib + pibp + numero) + 1/densidade;
+  pibp2 = pib2 / populaçao2;
+
+  super2 = populaçao2 + area2 + pib2 + pibp2 + numero2 + (1.0 / densidade2);
 
   printf("\n\n"); // pula duas linhas
 
-  printf("Estado: %s\n", estado);
+  printf("Estado: %s\n", estado2);
   printf("Código da carta: %s\n", codigo2);
-  printf("Nome da cidade: %s\n", nome);
-  printf("População: %.0lf\n", populaçao);
-  printf("Área em km²: %.0f\n", area);
-  printf("Pib: %.0lf\n", pib);
-  printf("Números de pontos turísticos: %d\n", numero);
-  printf("Densidade Populacional: %.3f\n", densidade);
-  printf("Pib Per Capita: %.0lf\n", pibp);
-  printf("Super poder: %.0f\n", super);
+  printf("Nome da cidade: %s\n", nome2);
+  printf("População: %.0lf\n", populaçao2);
+  printf("Área em km²: %.0f\n", area2);
+  printf("Pib: %.0lf\n", pib2);
+  printf("Números de pontos turísticos: %d\n", numero2);
+  printf("Densidade Populacional: %.3f\n", densidade2);
+  printf("Pib Per Capita: %.0lf\n", pibp2);
+  printf("Super poder: %.0f\n", super2);
 
   printf("\n\n"); // pular duas linhas
-
   
   // comparação das cartas
-  printf("Comparação das cartas\n");
-   if (populaçao > populaçao) {
-    printf("Carta %s venceu\n", codigo1);
-   } else  {
-    printf("carta %s venceu\n", codigo2);
-   }
-   if (area > area) {
-    printf("Carta %s venceu\n", codigo1);
-   } else  {
-    printf("Carta %s venceu\n", codigo2);
-   }
-   if (pib > pib) {
-    printf("Carta %s venceu\n", codigo1);
+  printf("                                               Comparação das cartas\n\n");
+
+  printf("Escolha um atributo para a comparação das cartas.\n");
+  printf("1 - População\n");
+  printf("2 - Área\n");
+  printf("3 - Pib\n");
+  printf("4 - Número de pontos turísticos\n");
+  printf("5 - Densidade Populacional\n");
+  printf("6 - Pib Per Capita\n");
+  printf("7 - Super poder\n");
+  printf("Escolha uma opção:\n");
+  scanf("%d", &opçao); 
+
+  switch (opçao)
+  {
+  case 1:
+    if (populaçao1 > populaçao2) {
+    printf("Carta %s venceu!!\n", codigo1);
+   } else if (populaçao1 < populaçao2) {
+    printf("carta %s venceu!!\n", codigo2);
    } else {
-    printf("Carta %s venceu\n", codigo2);
+    printf("Empate!!\n");
    }
-   if (numero > numero) {
-    printf("Carta %s venceu\n", codigo1);
+    break;
+    case 2:
+    if (area1 > area2) {
+      printf("Carta %s venceu!!\n", codigo1);
+    } else if (area1 < area2) {
+      printf("Carta %s venceu!!\n", codigo2);
+    } else {
+      printf("Empate!!\n");
+    }
+    break;
+    case 3:
+    if (pib1 > pib2) {
+    printf("Carta %s venceu!!\n", codigo1);
+   } else if (pib1 < pib2) {
+    printf("Carta %s venceu!!\n", codigo2);
    } else {
-    printf("Carta %s venceu\n", codigo2);
+    printf("Empate!!\n");
    }
-   if (densidade > densidade) {
-    printf("Carta %s venceu\n", codigo2);
+    break;
+    case 4:
+    if (numero1 > numero2) {
+    printf("Carta %s venceu!!\n", codigo1);
+   } else if (numero1 < numero2) {
+    printf("Carta %s venceu!!\n", codigo2);
    } else {
-    printf("Carta %s venceu\n", codigo1);
+    printf("Empate!!\n");
    }
-   if (pibp > pibp) {
-    printf("Carta %s venceu\n", codigo1);
+    break;
+    case 5:
+    if (densidade1 < densidade2) {
+    printf("Carta %s venceu!!\n", codigo1);
+   } else if (densidade1 > densidade2) {
+    printf("Carta %s venceu!!\n", codigo2);
    } else {
-    printf("Carta %s venceu\n", codigo2);
+    printf("Empate!!\n");
    }
-   if (super > super) {
-    printf("Carta %s venceu\n", codigo1);
+    break;
+    case 6:
+    if (pibp1 > pibp2) {
+    printf("Carta %s venceu!!\n", codigo1);
+   } else if (pibp1 < pibp2) {
+    printf("Carta %s venceu!!\n", codigo2);
    } else {
-    printf("Carta %s venceu\n", codigo2);
+    printf("Empate!!\n");
    }
-   printf("\n\n");
+    break;
+    case 7:
+    if (super1 > super2) {
+    printf("Carta %s venceu!!\n", codigo1);
+   } else if (super1 < super2)  {
+    printf("Carta %s venceu!!\n", codigo2);
+   } else {
+    printf("Empate!!\n");
+   }
+    break;
+  default:
+    printf("Opção inválida\n");
+    break;
+  }
    
-   if (populaçao > populaçao && area > area && pib > pib && numero > numero && densidade > densidade && pibp > pibp && super > super) {
-    printf("A Grande Campeã foi a Carta %s\n", codigo1);
-   } else {
-    printf("A Grande Campeã foi a Carta %s\n", codigo2);
-   }
+    
   
 
 
